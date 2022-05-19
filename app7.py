@@ -38,7 +38,7 @@ def main() :
         # 파일명을 유니크하게 만들어서 저장해야 한다.
         # 현재시간을 활용해서, 파일명을 만든다.
 
-        
+
         current_time = datetime.now()
         print(current_time.isoformat().replace(':','_'))
 
@@ -52,6 +52,7 @@ def main() :
 
     else :
         st.subheader('파일 업로드 프로젝트 입니다.')
+        
 
 
 
