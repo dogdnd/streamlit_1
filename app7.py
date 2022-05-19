@@ -20,7 +20,54 @@ def save_uploaded_file(directory, file) :
     return st.success("Saved file : {} in {}".format(file.name, directory))
 
 def main() :
-    pass
+    
+    # 사이드바 만들기
+    st.title('파일 업로드 프로젝트')
+
+    menu = ['Image', 'CSV', 'About']
+    choice = st.sidebar.selectbox('메뉴', menu)
+
+    if choice == menu[0] :
+        st.subheader('이미지 파일 업로드')
+        upload_file = st.file_uploader('이미지 파일 선택', type=['jpg','png','jpeg'])
+        if upload_file is not None :
+            print(upload_file.name)
+            print(upload_file.size)
+            print(upload_file.type)
+
+        # 파일명을 유니크하게 만들어서 저장해야 한다.
+        # 현재시간을 활용해서, 파일명을 만든다.
+
+        
+        current_time = datetime.now()
+        print(current_time.isoformat().replace(':','_'))
+
+        new_filename = current_time.isoformat().replace(':','_') + '.jpg'
+
+        upload_file.name = new_filename
+        save_uploaded_file('temp', upload_file)
+
+    elif choice == menu[1] :
+        st.subheader('CSV 파일 업로드')
+
+    else :
+        st.subheader('파일 업로드 프로젝트 입니다.')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 if __name__ == '__main__' :
