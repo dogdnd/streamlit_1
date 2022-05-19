@@ -4,9 +4,10 @@ def main() :
     st.title('웹 대시보드')
     st.text('웹 대시보드 개발하기')
 
-    name = '홍길동'
+    
 
     # 제 이름은 홍길동 입니다.
+    name = '홍길동'
     print('제 이름은 {}입니다.'.format(name))
 
     st.text('제 이름은 {}입니다.'.format(name))

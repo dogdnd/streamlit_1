@@ -42,6 +42,8 @@ def main() :
         current_time = datetime.now()
         print(current_time.isoformat().replace(':','_'))
 
+        
+
         new_filename = current_time.isoformat().replace(':','_') + '.jpg'
 
         upload_file.name = new_filename
@@ -52,7 +54,7 @@ def main() :
 
     else :
         st.subheader('파일 업로드 프로젝트 입니다.')
-        
+
 
 
 

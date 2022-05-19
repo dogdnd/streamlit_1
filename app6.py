@@ -18,6 +18,11 @@ def main() :
     st.write(address)
     # 3. 여러 행을 입력가능토록
 
+    
+    multi_list = st.text_area('여러행를 입력하세요')
+
+    st.write(multi_list)
+
 
     # 4. 숫자 입력, 정수
     st.number_input('숫자입력', 1, 100)
